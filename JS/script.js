@@ -23,23 +23,48 @@ svolgimento:
 
 // costanti 
 
-let kilometri =  ('quanti km vuoi fare ?');
-let age =  ('quanti anni hai ?');
-let cost = (kilometri * 0.21).toFixed(2);
+// let kilometri =  ('quanti km vuoi fare ?');
+// let age =  ('quanti anni hai ?');
 
-// formula sconti 
 
-// 18
-if (age < 18) {
-    let sale = (cost * 0.8).toFixed(2);
-    console.log(sale + '€');
-} 
+let name = document.getElementById('#namelastname')
+let kilometres = document.getElementById('#km')
+let years = document.getElementById('#age')
+let btnCliccami = document.querySelector('.bottone') 
 
-// 65
 
-else if (age > 65) {
-    let sale = (cost * 0.6).toFixed(2);
-    console.log(sale + '€');
-} else {
-    console.log (cost + '€' );
-}
+
+// .VALUE E PARSEINT UN PO OVUNQUE METTERE !!!!!!!!!!!!!!!!!!!!!!!!
+
+
+// creare l'evento per cui se clicchi il bottone genera il biglietto 
+
+
+btnCliccami.addEventListener ('click', function () {
+    
+    let kilometres = parseFloat(km.value)
+    let prezzobase = parseFloat(km * 0.21)
+
+
+    if (age <= 18) {
+        let sale = (prezzobase * 0.8).toFixed(2);
+        console.log(sale + '€');
+    } 
+
+    else if (age >= 65) {
+        let sale = (prezzobase * 0.6).toFixed(2);
+        console.log(sale + '€');
+    } else {
+        console.log (prezzobase + '€' );
+    }
+
+})
+
+
+// evento per cui si annulla tutto del biglietto 
+
+// let btnAnnulla = document.querySelector('.bottoneannulla'); 
+
+
+
+

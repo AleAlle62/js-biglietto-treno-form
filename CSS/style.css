@@ -1,0 +1,28 @@
+body {
+    text-align: center;
+    background-color: salmon;
+}
+
+.primo {
+    background-color: white;
+    margin: 60px;
+}
+
+.box-selection {
+    margin: 20px;
+}
+
+.bottoni-vari {
+    margin: 20px;
+}
+
+
+.secondo {
+    background-color: white;
+    margin: 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: flex-start;
+    padding: 2em;
+}

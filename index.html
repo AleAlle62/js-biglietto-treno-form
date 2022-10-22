@@ -16,24 +16,81 @@
 </head>
 <body>
 
-    <!-- nome e cognome -->
-    <div>Nome Cognome : <span id="name"></span></div>
-    <input type="text" name="" id="">
+    <!-- prima parte biglietto -->
+    <div class="primo">
+        <h1>Calcola il prezzo del tuo biglietto</h1>
+    
 
-    <!-- chilometri  -->
-    <div>hai deciso di fare: <span id="km"></span></div>
-    <input type="number" name="" id="">
 
-    <!-- eta -->
-    <div>e la tua eta è: <span id="eta"></span></div>
-    <input type="number" name="" id="">
 
-    <!-- prezzo finale  -->
-    <div>pertanto il tuo prezzo finale è: <span id="sconto"></span></div>
 
-    <!-- bottone genera -->
-    <button> Genera</button>
 
+
+        <div class="box-selection">
+            <!-- nome e cognome -->
+            <div>Nome Cognome : <span id="nome-cognome"></span></div>
+            <input type="text" name="" id="namelastname" placeholder="scrivi qui..">
+        
+            <!-- chilometri  -->
+            <div>hai deciso di fare: <span id="chilometri"></span></div>
+            <input type="number" name="" id="km" placeholder="scrivi qui...">
+        
+
+            <!-- <div> 
+                <p>quanti anni hai</p>
+                <select name="eta" id="age">
+                    <option value="minorenne">minorenne</option>
+                    <option value="max">Maggiorenne</option>
+                    <option value="over">Over 65</option>
+                </select>
+            </div> -->
+
+
+            <!-- eta -->
+            <div>e la tua eta è: <span id="eta"></span></div>
+            <input type="number" name="" id="age" placeholder="scrivi qui...">
+
+
+        </div>
+        
+
+
+
+        
+        <div class="bottoni-vari">
+            <!-- bottone genera -->
+            <div>
+                <button class="bottone">Genera</button>
+                <!-- bottone annulla  -->
+                <button class="bottoneannulla">Annulla</button>
+            </div>
+        </div>
+    </div>
+
+
+
+    
+
+    <!-- seconda parte del biglietto -->
+    
+    <h1>il tuo biglietto</h1>
+
+    <div class="secondo">
+
+        <div class="nome-passeggero">nome passeggero:</div>
+
+        <div class="offerta">Offerta:</div>
+
+        <div class="carrozza">Carrozza:</div>
+
+        <div class="codice-cp">Codice-CP:</div>
+        
+        <div class="costo-biglietto">Costo biglietto:</div>
+
+    </div>
 
 </body>
 </html>
+
+
+<!-- mettere tutto all'interno della funzione del bottone  -->
