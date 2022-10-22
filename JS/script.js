@@ -24,7 +24,7 @@ L'output del prezzo finale va messo fuori in forma umana (con massimo due decima
 
 // costanti 
 
-// let kilometri = document.getElementById('km')
+let kilometri = document.getElementById('km')
 let age = document.getElementById('eta')
 // let cost = (kilometri * 0.21).toFixed(2);
 let btnCliccami = document.querySelector('.bottone') 
@@ -32,8 +32,8 @@ let btnCliccami = document.querySelector('.bottone')
 
 
 
-const pricePerKilometer = 0.21;
-let basePrice = pricePerKilometer * 0.21;
+let pricePerKilometer = 0.21;
+let basePrice = pricePerKilometer * km;  // IL PROBKEMA DEL CALCOLO STA QUI
 let discountRate = 0;
 
 
