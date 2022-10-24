@@ -3,7 +3,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-image: url(https://static.fanpage.it/wp-content/uploads/sites/6/2021/07/coughing-cat-b.jpg);
+    background-color: white;
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -15,7 +15,7 @@ body {
 .generatore {
     text-align: center;
     margin-top: 50px;
-    background-image: url(https://wips.plug.it/cips/supereva/cms/2020/09/schermata-2020-09-21-alle-12-50-41.png?w=850&a=r);
+    background-color: salmon;
     background-size: cover;
     background-repeat: no-repeat;
     width: 650px;
@@ -26,7 +26,7 @@ body {
 .biglietto {
     text-align: center;
     margin-top: 50px;
-    background-image: url(https://wips.plug.it/cips/supereva/cms/2020/09/schermata-2020-09-21-alle-12-50-41.png?w=850&a=r);
+    background-color: salmon;
     border-radius: 20px;
     background-size: cover;
     width: 600px;
