@@ -16,78 +16,53 @@
 </head>
 <body>
 
-    <!-- prima parte biglietto -->
-    <div class="primo">
-        <h1>Calcola il prezzo del tuo biglietto</h1>
-    
+    <form action=ìì>
+        <div class="generatore">
 
+            <h1>Generatore biglietto</h1>
 
+            <label for="name">nome</label>
+            <input type="text" name="name" id="name" placeholder="scrivi qui...">
 
+            <label for="kilometres">kilometri</label>
+            <input type="number" name="kilometres" id="kilometres" placeholder="scrivi qui...">
 
+            <select name="age" id="age">
+                <option value=""></option>
+                <option value="min">minorenne</option>
+                <option value="mag">standard</option>
+                <option value="over">over 65</option>
+            </select>
 
+            <button id="btn-generate">Genera</button>
 
-        <div class="box-selection">
-            <!-- nome e cognome -->
-            <div>Nome Cognome : <span id="nome-cognome"></span></div>
-            <input type="text" name="" id="namelastname" placeholder="scrivi qui..">
-        
-            <!-- chilometri  -->
-            <div>hai deciso di fare: <span id="chilometri"></span></div>
-            <input type="number" name="" id="km" placeholder="scrivi qui...">
-        
-
-            <!-- <div> 
-                <p>quanti anni hai</p>
-                <select name="eta" id="age">
-                    <option value="minorenne">minorenne</option>
-                    <option value="max">Maggiorenne</option>
-                    <option value="over">Over 65</option>
-                </select>
-            </div> -->
-
-
-            <!-- eta -->
-            <div>e la tua eta è: <span id="eta"></span></div>
-            <input type="number" name="" id="age" placeholder="scrivi qui...">
-
-
+                <inputtype="text">
+                <input type="reset" value="Reset">
+            </form>
+            
         </div>
-        
 
+    <div class="biglietto">
+        <h1>Il tuo biglietto</h1>
+        <div class="ticket hidden">
 
-
-        
-        <div class="bottoni-vari">
-            <!-- bottone genera -->
-            <div>
-                <button class="bottone">Genera</button>
-                <!-- bottone annulla  -->
-                <button class="bottoneannulla">Annulla</button>
+            <div class="biglietto-nome">
+                Nome: <span id="ticket-name"></span>
             </div>
+
+            <div class="biglietto-km">
+                kilometri: <span id="ticket-km"></span>
+            </div>
+
+
+            <div class="biglietto-prezzo">
+                Prezzo: <span id="ticket-price"></span>
+            </div>
+
+
         </div>
     </div>
 
-
-
-    
-
-    <!-- seconda parte del biglietto -->
-    
-    <h1>il tuo biglietto</h1>
-
-    <div class="secondo">
-
-        <div class="nome-passeggero">nome passeggero:</div>
-
-        <div class="offerta">Offerta:</div>
-
-        <div class="carrozza">Carrozza:</div>
-
-        <div class="codice-cp">Codice-CP:</div>
-        
-        <div class="costo-biglietto">Costo biglietto:</div>
-
-    </div>
 
 </body>
 </html>

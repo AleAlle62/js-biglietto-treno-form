@@ -7,76 +7,54 @@ va applicato uno sconto del 40% per gli over 65.
 L'output del prezzo finale va messo fuori in forma umana (con massimo due decimali, per indicare centesimi sul prezzo). Questo richiederà un minimo di ricerca.
 */
 
-// ideazione del programma 
+const inputName = document.getElementById('name')
+const inputDistance = document.getElementById('kilometres')
+const inputAge = document.getElementById('age')
+const btnGenerate = document.getElementById('btn-generate')
+const btnReset = document.getElementById('btn-reset')
+const pricePerKilometer = 0.21;
+const name = inputName.value
 
-/*
-
-1) chiedere all'utente num km e eta passeggero
-2) OBBIETTIVO : calcolare il costo del viaggio
-3) COME CALCOLARE IL COSTO: 
-    . 0,21 a km
-    . - 20% ai < 18anni
-    . - 40% a > 65anni
-
-4) dare il risultato in output con due cifre dopo la virgola.
-
-*/
-
-// costanti 
-
-let kilometri = document.getElementById('km')
-let age = document.getElementById('eta')
-// let cost = (kilometri * 0.21).toFixed(2);
-let btnCliccami = document.querySelector('.bottone') 
+const outputTicket = document.querySelector('.ticket')
+const outputName =  document.getElementById('ticket-name')
+const outputPrice =  document.getElementById('ticket-price')
+const outputKm =  document.getElementById('ticket-km')
 
 
+// al click del tasto genera esegue tutti i comandi 
 
+btnGenerate.addEventListener('click', function(){
 
-let pricePerKilometer = 0.21;
-let basePrice = pricePerKilometer * km;  // IL PROBKEMA DEL CALCOLO STA QUI
-let discountRate = 0;
-
-
-// formula sconti 
-
-
-
-btnCliccami.addEventListener ('click', function () {
-    // if (age < 18) {
-    //     let sale = (cost * 0.8).toFixed(2);
-    //     console.log(sale + '€');
-    // } 
+    const distance = parseFloat(inputDistance.value)
+    const age = inputAge.value
+    const basePrice = pricePerKilometer * distance;
+    let discountRate = 0;
     
-    // else if (age > 65) {
-    //     let sale = (cost * 0.6).toFixed(2);
-    //     console.log(sale + '€');
-    // } else {
-    //     console.log (cost + '€' );
-    // }
-
-    if (age < 18) {
-        discountRate = totalPrice * 0.4;
-    } else if (age >= 65) {
-        discountRate = totalPrice  * 0.6;
+    switch (age) {
+        case 'min':
+            discountRate = 20;
+            break;
+    
+        case 'over':
+            discountRate = 40;
+            break;
+    
+    
+        default :
+            discountRate = 0;
+            break;
     }
     
-    // alternativa A
     let totalPrice = basePrice - basePrice * discountRate / 100;
-    totalPrice = parseFloat(totalPrice.toFixed(2));
+    
+    
+    totalPrice = Math.round(totalPrice * 100) / 100;
     console.log('Il prezzo del biglietto è: ' + totalPrice);
+    
+    outputName.innerHTML = inputName.value
+    outputPrice.innerHTML = totalPrice + '€'
+    outputTicket.classList.remove('hidden')
+    outputKm.innerHTML = inputDistance.value + 'km'
 })
-
-
-
-
-// collegamenti 
-
-// window.document.getElementById('km').innerHTML = kilometri + 'km';
-// window.document.getElementById('eta').innerHTML = age + 'y.o.';
-// window.document.getElementById('sconto').innerHTML = cost + '€';
-
-
-
-
 
 
